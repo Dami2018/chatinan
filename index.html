@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    
+
+.mensaje1{
+    background-color: green;
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin-left: 20px;
+}
+
+.mensaje2{
+    background-color: purple;
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin-left: 20px;
+}
+
+
+
+.avatar{
+    width: 60px;
+    border-radius: 30px;
+}
+
+.msmUsuario1{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.msmUsuario2{
+    display: flex;
+    margin-left: 200px;
+    margin-bottom: 20px;
+}
+
+.contMensajes{
+    width: 30%;
+    background-color: grey;
+}
+
+</style>
+</head>
+<body>
+    
+
+
+    
+
+
+
+
+
+
+<div id="contMensajes">
+
+</div>
+
+
+<div style="display: flex; ">
+    <div style="margin: 25px;">
+        <input type="text" id="msm1">
+        <button onclick="enviarMensaje1()">Enviar mensaje</button>
+    </div>
+
+    <div style="margin: 25px;">
+        <input type="text" id="msm2">
+        <button onclick="enviarMensaje2()">Enviar mensaje</button>
+    </div>
+    
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+var contMensajes=document.getElementById('contMensajes')
+
+
+function enviarMensaje1(){
+    var contenidoActual = contMensajes.outerHTML
+    var texto = document.getElementById('msm1').value
+    contMensajes.innerHTML=`${contenidoActual} <div class="msmUsuario1">
+    <div>
+        <img class="avatar" src="https://thumbs.dreamstime.com/b/cara-linda-del-monstruo-avatar-cuadrado-114650081.jpg" alt="">
+    </div>
+
+    <div class="mensaje1">
+        <span>${texto}</span>
+        <br>
+        <span>09:00</span>
+    </div>
+</div>`
+
+document.getElementById('msm1').value = ''
+}
+
+
+function enviarMensaje2(){
+    var contenidoActual = contMensajes.outerHTML
+    var texto = document.getElementById('msm2').value
+    contMensajes.innerHTML=`${contenidoActual} <div class="msmUsuario2">
+    <div>
+        <img class="avatar" src="https://media.istockphoto.com/id/1212940283/es/vector/cara-divertida-monstruo-de-dibujos-animados-avatar-cuadrado-monstruo-vectorial.jpg?s=170x170&k=20&c=8ztCWR4QP8Lh8OvkGtPEdwMiqkIcOp-Wg0ZLfai1qZ8=" alt="">
+    </div>
+
+    <div class="mensaje2">
+        <span>${texto}</span>
+        <br>
+        <span>09:00</span>
+    </div>
+</div>`
+
+document.getElementById('msm2').value ='';
+
+}
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
