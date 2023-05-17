@@ -106,6 +106,9 @@ var contMensajes=document.getElementById('contMensajes')
 
 
 function enviarMensaje1(){
+
+    var fecha = new Date()
+
     var contenidoActual = contMensajes.outerHTML
     var texto = document.getElementById('msm1').value
     contMensajes.innerHTML=`${contenidoActual} <div class="msmUsuario1">
@@ -116,7 +119,7 @@ function enviarMensaje1(){
     <div class="mensaje1">
         <span>${texto}</span>
         <br>
-        <span>09:00</span>
+        <span>${fecha.toLocaleTimeString()}</span>
     </div>
 </div>`
 
@@ -125,6 +128,7 @@ document.getElementById('msm1').value = ''
 
 
 function enviarMensaje2(){
+    var fecha = new Date()
     var contenidoActual = contMensajes.outerHTML
     var texto = document.getElementById('msm2').value
     contMensajes.innerHTML=`${contenidoActual} <div class="msmUsuario2">
@@ -135,7 +139,7 @@ function enviarMensaje2(){
     <div class="mensaje2">
         <span>${texto}</span>
         <br>
-        <span>09:00</span>
+        <span>${fecha.toLocaleTimeString()}</span>
     </div>
 </div>`
 
